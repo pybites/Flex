@@ -1,6 +1,6 @@
 # Flex [![Build Status](https://travis-ci.org/alexandrevicenzi/Flex.svg?branch=master)](https://travis-ci.org/alexandrevicenzi/Flex) [![Dependency Status](https://david-dm.org/alexandrevicenzi/Flex.svg)](https://david-dm.org/alexandrevicenzi/Flex) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/alexandre-vicenzi/flex?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-The minimalist [Pelican](http://blog.getpelican.com/) theme.
+The minimalist [Pelican](http://blog.getpelican.com/) theme. 
 
 ## Features
 
