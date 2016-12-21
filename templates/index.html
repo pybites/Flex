@@ -15,7 +15,7 @@
 {% for article in articles_page.object_list %}
 <article>
   <header>
-    <h2><a href="{{ SITEURL }}/{{ article.url }}#{{ article.slug }}">{{ article.title }}</a></h2>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
     <p>
       {{ _('Posted by %(author)s on %(when)s in %(category)s',
 		   author='<a href="%s/%s">%s</a>'|format(SITEURL, article.author.url, article.author.name)|safe,
