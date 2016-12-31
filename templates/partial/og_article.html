@@ -21,3 +21,13 @@
 {% else %}
 <meta property="og:image" content="{{ SITELOGO }}">
 {% endif %}
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ TWITTER_USERNAME }}" />
+<meta name="twitter:title" content="{{ article.title|striptags }}" />
+<meta name="twitter:description" content="{{ article.summary|striptags }}" />
+{% if 'cover' in article.metadata %}
+<meta name="twitter:image" content="{{ SITEURL }}/{{ article.metadata['cover'] }}">
+{% else %}
+<meta name="twitter:image" content="{{ SITELOGO }}" />
+{% endif %}
