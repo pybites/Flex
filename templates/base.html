@@ -110,7 +110,12 @@
 		</ul>
       {% endif %}
 
-      {% include "partial/mailchimp.html" %}
+	  {% if not article %}
+	      <div id='mc-dark'>
+      		  {% include "partial/mailchimp.html" %}
+		  </div>
+      {% endif %}
+	
     </div>
 
     {% if GOOGLE_ADSENSE and GOOGLE_ADSENSE.ads.aside %}
