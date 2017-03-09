@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} &ndash; {{ _('Code Challenges') }}{% endblock %}
+
+{% block content %}
+<article class="single">
+  <header>
+    <h1>{{ _('Code Challenges') }}</h1>
+	<img src='http://pybit.es/images/featured/pb-challenge.png' alt='challenge logo' class='theme-logo'>
+  </header>
+  <ul>
+      {% for article in dates %}
+		{% if 'codechallenge' in article.url %}
+      		<li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
+		{% endif %}
+      {% endfor %}
+  </ul>
+</article>
+{% endblock %}

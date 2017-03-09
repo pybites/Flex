@@ -6,17 +6,10 @@
   <header>
     <h1>{{ _('Resources') }}</h1>
   </header>
-  <div>
-    <dl>
-      {% set previous_date = False %}
+  <ul>
       {% for article in dates %}
-        {% if article.locale_date != previous_date %}
-          {% set previous_date = article.locale_date %}
-      <dt>{{ article.locale_date }}</dt>
-        {% endif %}
-      <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+      	<li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
       {% endfor %}
-    </dl>
-  </div>
+  </ul>
 </article>
 {% endblock %}

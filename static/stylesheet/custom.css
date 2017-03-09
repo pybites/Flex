@@ -69,3 +69,7 @@ aside nav ul li {
 #mc_embed_signup .mc-field-group {
 	min-height: 35px;
 }
+
+.theme-logo {
+	float: right;
+}
