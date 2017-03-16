@@ -110,6 +110,12 @@
 		</ul>
       {% endif %}
 
+  	  {% if TWITTER_USERNAME %}
+	  <a class="twitter-follow-button" href="https://twitter.com/pybites"
+	  	data-show-screen-name="false" data-size="large" data-show-count="false"> 
+		Follow @pybites</a>
+      {% endif %}
+
 	  {% if not article %}
 	      <div id='mc-dark'>
       		  {% include "partial/mailchimp.html" %}
