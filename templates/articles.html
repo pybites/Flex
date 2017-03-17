@@ -7,6 +7,16 @@
     <h1>{{ _('Articles') }}</h1>
 	<img src='http://pybit.es/images/featured/pb-article.png' alt='article logo' class='theme-logo'>
   </header>
+
+  <p>Below is a listing of our articles. Every week we share our learning, one bite at the time. If you have anything you struggle with in Python, suggestions or ideas for topics please do <a href='https://twitter.com/intent/tweet?text=%40pybites'>reach out</a> ...
+  <br><br><br>
+
+  <a id='PythonicPromo' href='http://www.paywithapost.de/pay?id=9cddb187-fdc9-4985-9b4d-411585ae4a93' target='_blank'><img src='http://pybit.es/images/promo/cheatsheet-promo.png' alt='Pythonic Tip Download Banner'></a>
+  
+  <p>
+  
+  <hr>
+
   <ul>
       {% for article in dates %}
 		{% if 'codechallenge' not in article.url and 'twitter_digest' not in article.url %}
