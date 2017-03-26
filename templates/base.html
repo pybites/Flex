@@ -72,13 +72,39 @@
   {% if GOOGLE_TAG_MANAGER %}
     {% include "partial/gtm.html" %}
   {% endif %}
-  <aside>
+
+  <!-- change aside color based on article vs challenge vs news -->
+  {% if 'codechallenge' in output_file  %}
+    <aside class='red'>
+  {% elif 'twitter_digest' in output_file  %}
+    <aside class='green'>
+  {% elif article %}
+    <aside class='blue'>
+  {% else %}
+    <aside class='default'>
+  {% endif %}
+
     <div>
       <a href="{{ SITEURL }}">
+
+        <!-- use this if you want just one site logo -->
+
         {% if SITELOGO %}
-        <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+            <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% else %}
-        <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+
+            <!-- in our case we want to rotate 3 different logos (same logo but with different backgrounds) -->
+
+            {% if 'codechallenge' in output_file  %}
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/challenges.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+            {% elif 'twitter_digest' in output_file  %}
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/news.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+            {% elif article %}
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/article.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+            {% else %}
+                <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+            {% endif %}
+
         {% endif %}
       </a>
       <h1><a href="{{ SITEURL }}">{{ SITETITLE }}</a></h1>
