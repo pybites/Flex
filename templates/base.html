@@ -78,6 +78,8 @@
     <aside class='red'>
   {% elif 'twitter_digest' in output_file  %}
     <aside class='green'>
+  {% elif 'pbcl' in output_file  %}
+    <aside class='pink'>
   {% elif article %}
     <aside class='blue'>
   {% else %}
@@ -91,6 +93,8 @@
 			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/challenges.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
 		{% elif 'twitter_digest' in output_file  %}
 			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/news.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+		{% elif 'pbcl' in output_file  %}
+			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/special.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
 		{% elif article %}
 			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/article.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
 		{% else %}
