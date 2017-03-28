@@ -5,7 +5,7 @@
 <article class="single">
   <header>
     <h1>{{ _('Code Challenges') }}</h1>
-	<img src='http://pybit.es/images/featured/pb-challenge.png' alt='challenge logo' class='theme-logo'>
+	<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/page-challenges.png" alt='article logo' class='theme-logo'>
   </header>
 
   <p>Every Monday we release a code challenge here.
@@ -21,9 +21,9 @@
   We believe solving code challenges is a very effective way to achieve this.<br>
   Have fun!</p>
 
-  <hr>
-
-  <ul>
+  <br>
+  <input type="text" id="search" onkeyup="filterList()" placeholder="Search Challenges  .." title="What do you like to code?"<>
+  <ul id='articleList'>
       {% for article in dates %}
 		{% if 'codechallenge' in article.url %}
       		<li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>

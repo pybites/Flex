@@ -225,6 +225,10 @@
   {% if ADD_THIS_ID %}
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}" async="async"></script>
   {% endif %}
+  {% if not article %}
+  	<!-- search input field or archive pages -->
+  	<script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/scripts/base.js" type="text/javascript"></script>
+  {% endif %}
 
   {% if PIWIK_URL and PIWIK_SITE_ID %}
     {% include "partial/piwik.html" %}
