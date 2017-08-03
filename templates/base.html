@@ -137,14 +137,16 @@
       {% endif %}
 
   	  {% if TWITTER_USERNAME %}
-	  <a class="twitter-follow-button" href="https://twitter.com/pybites"
-	  	data-show-screen-name="false" data-size="large" data-show-count="false"> 
-		Follow @pybites</a>
+	      <a class="twitter-follow-button" href="https://twitter.com/{{ TWITTER_USERNAME }}" data-show-screen-name="false" data-size="large" data-show-count="false">Follow @{{ TWITTER_USERNAME }}</a>
       {% endif %}
 
-	  {% if not article %}
-	      <div id='mc-dark'>
-      		  {% include "partial/mailchimp.html" %}
+  	  {% if GITHUB_USERNAME %}
+		    <a class="github-button" href="https://github.com/{{ GITHUB_USERNAME }}" data-size="large" aria-label="Follow @{{ GITHUB_USERNAME }} on GitHub">Follow</a>
+      {% endif %}
+
+	    {% if not article %}
+	    <div id='mc-dark'>
+     	  {% include "partial/mailchimp.html" %}
 		  </div>
       {% endif %}
 	
@@ -227,6 +229,10 @@
 	}(document, "script", "twitter-wjs"));</script>
   {% endif %}
 
+  {% if GITHUB_USERNAME %}
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  {% endif %}
+	
   {% if ADD_THIS_ID %}
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ ADD_THIS_ID }}" async="async"></script>
   {% endif %}
