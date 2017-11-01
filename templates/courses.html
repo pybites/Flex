@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} &ndash; {{ _('Courses') }}{% endblock %}
+
+{% block content %}
+<article class="single">
+
+  <header>
+    <h1>PyBites {{ _('Courses') }}</h1>
+  </header>
+  <p>At PyBites we love to teach what we learn! We gain immense satisfaction out of doing so but more importantly, it encourages us to keep learning!</p>
+  <p>Below you'll find the online courses we currently teach:</p>
+
+  <div class='project'>
+    <div class="ribbon right purple">
+      <a href="https://www.udemy.com/python-flask-for-beginners/learn/v4/overview" target="_blank">Go to Course</a>
+    </div>
+
+    <h3 class='projectHeader'>Python Flask for Beginners</h3>
+    <ul>
+      <li>Lectures: 12</li>
+      <li>Video: 2 hours</li>
+      <li>Skill level: Beginner Level</li>
+    </ul>
+    <div class='courseContent'>
+      <p><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/pybites-courses-flask-1.png' alt='Course banner'></p>
+      <p>Python Flask for Beginners is a course that will teach you how to write your first Python Flask web application. It's a practical course: by the second video we'll have you writing your first, basic Flask app.</p>
+      <p>Continue on and you'll learn the concepts needed to start writing your own cool Flask applications. The best part is that you'll start to see how you can convert your existing CLI based scripts into functional web apps (warning: it's addictive!)</p>
+      <p>We do expect you to be somewhat competent in Python but don't stress if you're not an expert, we'll supply additional resources where needed. Enjoy!</p>
+    </div>
+  </div>
+
+</article>
+{% endblock %}
