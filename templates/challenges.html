@@ -23,7 +23,7 @@
   <br>
   <input type="text" id="search" onkeyup="filterList()" placeholder="Search Challenges  .." title="What do you like to code?"<>
   <ul id='articleList' class='articleList'>
-      {% for article in dates | sort(attribute='title', reverse=True) %}
+      {% for article in dates %}
 		{% if 'codechallenge' in article.url %}
       		<li><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></li>
 		{% endif %}
