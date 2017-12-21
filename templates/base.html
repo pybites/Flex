@@ -74,13 +74,32 @@
     {% include "partial/gtm.html" %}
   {% endif %}
 
-  <!-- change aside color based on article vs challenge vs news -->
+  <!-- change ribbon color based on topic -->
+  <div class="ribbon right
+    {% if 'codechallenge' in output_file or 'challenges.html' in output_file  %}
+      red
+    {% elif 'twitter_digest' in output_file or 'news.html' in output_file %}
+      green
+    {% elif 'special' in output_file or 'projects.html' in output_file or 'courses.html' in output_file %}
+      purple
+    {% elif 'guest' in output_file  %}
+      brown
+    {% elif article or 'articles.html' in output_file %}
+      blue
+    {% else %}
+      default
+    {% endif %}
+  ">
+    <a href="https://codechalleng.es" target="_blank">Click here to code!</a>
+  </div>
+
+  <!-- change aside color based on topic -->
   {% if 'codechallenge' in output_file or 'challenges.html' in output_file  %}
     <aside class='red'>
   {% elif 'twitter_digest' in output_file or 'news.html' in output_file %}
     <aside class='green'>
   {% elif 'special' in output_file or 'projects.html' in output_file or 'courses.html' in output_file %}
-    <aside class='pink'>
+    <aside class='purple'>
   {% elif 'guest' in output_file  %}
     <aside class='brown'>
   {% elif article or 'articles.html' in output_file %}
@@ -88,7 +107,7 @@
   {% else %}
     <aside class='default'>
   {% endif %}
-
+  
     <div>
       <a href="{{ SITEURL }}">
 
