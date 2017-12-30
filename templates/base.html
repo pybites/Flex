@@ -80,10 +80,12 @@
       red
     {% elif 'twitter_digest' in output_file or 'news.html' in output_file %}
       green
-    {% elif 'special' in output_file or 'projects.html' in output_file or 'courses.html' in output_file %}
+    {% elif 'special' in output_file or 'projects.html' in output_file %}
       purple
     {% elif 'guest' in output_file  %}
       brown
+    {% elif 'courses.html' in output_file  %}
+      yellow
     {% elif article or 'articles.html' in output_file %}
       blue
     {% else %}
@@ -98,10 +100,12 @@
     <aside class='red'>
   {% elif 'twitter_digest' in output_file or 'news.html' in output_file %}
     <aside class='green'>
-  {% elif 'special' in output_file or 'projects.html' in output_file or 'courses.html' in output_file %}
+  {% elif 'special' in output_file or 'projects.html' in output_file %}
     <aside class='purple'>
   {% elif 'guest' in output_file  %}
     <aside class='brown'>
+  {% elif 'courses.html' in output_file  %}
+    <aside class='yellow'>
   {% elif article or 'articles.html' in output_file %}
     <aside class='blue'>
   {% else %}
@@ -110,21 +114,21 @@
   
     <div>
       <a href="{{ SITEURL }}">
-
         {% if 'codechallenge' in output_file or 'challenges.html' in output_file  %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/challenges.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/challenges.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% elif 'twitter_digest' in output_file or 'news.html' in output_file %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/news.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
-        {% elif 'special' in output_file or 'projects.html' in output_file or 'courses.html' in output_file %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/special.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
-		{% elif 'guest' in output_file  %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/guest.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/news.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        {% elif 'special' in output_file or 'projects.html' in output_file %}
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/special.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        {% elif 'guest' in output_file  %}
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/guest.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        {% elif 'courses.html' in output_file  %}
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/course.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% elif article or 'articles.html' in output_file %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/article.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
-		{% else %}
-			<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
-		{% endif %}
-
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/article.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        {% else %}
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+        {% endif %}
       </a>
       <h1><a href="{{ SITEURL }}">{{ SITETITLE }}</a></h1>
 
