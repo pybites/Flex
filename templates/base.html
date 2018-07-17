@@ -144,25 +144,16 @@
       </nav>
       {% endif %}
 
-      {% if SOCIAL %}
-		<ul class="social">
-			{% for name, link in SOCIAL %}
-			<li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
-			{% endfor %}
-		</ul>
-      {% endif %}
-
-  	  {% if TWITTER_USERNAME %}
-	      <a class="twitter-follow-button" href="https://twitter.com/{{ TWITTER_USERNAME }}" data-show-screen-name="false" data-size="large" data-show-count="false">Follow @{{ TWITTER_USERNAME }}</a>
-      {% endif %}
-
-  	  {% if GITHUB_USERNAME %}
-		    <a class="github-button" href="https://github.com/{{ GITHUB_USERNAME }}" data-size="large" aria-label="Follow @{{ GITHUB_USERNAME }} on GitHub">Follow</a>
-      {% endif %}
+      <ul class="social">
+        <li><a href="https://twitter.com/pybites" target="_blank"><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/socialmedia/twitter.png' alt='Follow us on Twitter'></a></li>
+        <li><a href="https://github.com/pybites/" target="_blank"><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/socialmedia/github.png' alt='Follow us on Github'></a></li>
+        <li><a href="https://instagram.com/pybites" target="_blank"><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/socialmedia/instagram.png' alt='Follow us on Instagram'></a></li>
+        <li><a href="https://www.youtube.com/channel/UCBn-uKDGsRBfcB0lQeOB_gA" target="_blank"><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/socialmedia/youtube.png' alt='Follow us on Youtube'></a></li>
+        <li><a href="https://www.facebook.com/groups/pybites/" target="_blank"><img src='{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/socialmedia/facebook.png' alt='Follow us on Facebook'></a></li>
+      </ul>
 
       <br>
       <script src="https://apis.google.com/js/platform.js"></script>
-      <div class="g-ytsubscribe" data-channelid="UCBn-uKDGsRBfcB0lQeOB_gA" data-layout="default" data-count="default"></div>
 
 	    {% if not article %}
 	    <div id='mc-dark'>
