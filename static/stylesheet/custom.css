@@ -230,22 +230,23 @@ h2#sitesubtitle {
   z-index: 999;
   position: fixed;
   bottom: 0px;
-  right: 50px;
+  right: 80px;
   background-color: #fff;
   border: 1px solid #f2f2f2;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
 #codeChallengeWrapper button {
-  background-color: #2e4053;
-  color: #fff;
+  background-color: #ffce3e;
+  color: #000;
   width: 100%;
   border: none;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   padding: 10px;
   font-size: 120%;
-  outline:none;
+  outline: none;
+  cursor: pointer;
 }
 #codeChallengeWrapper blockquote {
   font-size: 130%;
