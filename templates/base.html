@@ -71,6 +71,10 @@
 
 </head>
 <body>
+  {% if CC_ES %}
+    {% include "partial/cc.es.html" %}
+  {% endif %}
+
   {% if GOOGLE_TAG_MANAGER %}
     {% include "partial/gtm.html" %}
   {% endif %}
